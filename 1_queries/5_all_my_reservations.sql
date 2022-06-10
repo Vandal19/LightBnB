@@ -8,4 +8,4 @@ ORDER BY start_date
 LIMIT 10;
 
 
-SELECT * FROM users WHERE name = 'BobW'
+
