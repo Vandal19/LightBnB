@@ -2,6 +2,8 @@
 
 LightBnB, an a revolutionary web application for the travel industry that will allow home owners to rent out their homes to people on vacation, creating an alternative to hotels and bed and breakfasts.
 
+This project is a combination of HTML, CSS, JS, jQuery, AJAX and SQL skills through the use of Node, Express and PSQL platforms to complete the project.
+
 ## Getting Started
 
 1. Create a new repository using this repository as a template.
