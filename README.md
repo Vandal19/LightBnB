@@ -8,8 +8,8 @@ LightBnB, an a revolutionary web application for the travel industry that will a
 2. Clone your repository onto your local device.
 3. Cd into LightBnB_WebApp-master folder
 4. Install dependencies using the `npm install` command.
-5. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3030/>.
-6. Go to <http://localhost:3030/> in your browser.
+5. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
+6. Go to <http://localhost:3000/> in your browser.
 
 ## Dependencies
 
