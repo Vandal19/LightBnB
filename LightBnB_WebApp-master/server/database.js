@@ -10,8 +10,6 @@ const pool = new Pool({
   database: "lightbnb",
 });
 
-// pool.query(`SELECT EMAIL FROM users LIMIT 10;`).then(response => {console.log(response.rows[1])})
-
 /// Users
 
 /**
@@ -80,6 +78,7 @@ exports.addUser = addUser;
  * @param {string} guest_id The id of the user.
  * @return {Promise<[{}]>} A promise to the reservations.
  */
+
 const getAllReservations = function (guest_id, limit = 10) {
   const queryString = `
   SELECT reservations.*, properties.*, avg(property_reviews.rating) as average_rating
@@ -94,7 +93,6 @@ const getAllReservations = function (guest_id, limit = 10) {
   return pool
     .query(queryString, [guest_id, limit])
     .then((result) => {
-      console.log(result.rows);
       return result.rows;
     })
     .catch((error) => {
@@ -111,12 +109,13 @@ exports.getAllReservations = getAllReservations;
  * @param {*} limit The number of results to return.
  * @return {Promise<[{}]>}  A promise to the properties.
  */
+// Insert a LEFT JOIN instead to show new listed properties under MyListings although there is no review or an average rating
 const getAllProperties = function (options, limit = 10) {
   const queryParams = [];
 
   let queryString = `
   SELECT properties.*, avg(property_reviews.rating) as average_rating FROM properties
-  JOIN property_reviews ON property_id = properties.id
+  LEFT JOIN property_reviews ON property_id = properties.id
   WHERE TRUE
   `;
 

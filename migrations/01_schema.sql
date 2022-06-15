@@ -1,3 +1,4 @@
+/* Tables for LightBnB Database */
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS properties CASCADE;
 DROP TABLE IF EXISTS reservations CASCADE;
